@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "dot.io",
+  "description": "Switch github.com/foo/bar <-> foo.github.io/bar",
+  "version": "0.0.1",
+  "content_scripts": [
+    {
+      "js": ["assets/js/content.js"],
+      "matches": ["*://github.com/*", "*://*.github.io/*"]
+    }
+  ],
+  "icons": {
+    "48": "assets/img/icon.png",
+    "128": "assets/img/icon.png"
+  },
+  "background": {
+    "scripts": ["assets/js/background.js"]
+  },
+  "browser_action": {
+    "default_icon": "assets/img/icon.png",
+    "default_title": "dot.io"
+  },
+  "permissions": ["tabs"]
+}
